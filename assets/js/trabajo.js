@@ -34,9 +34,21 @@ formulario3.addEventListener('submit', function (evento) {
     let numeroUsuario3 = evento.target.inputTres.value
     let generohm = evento.target.generos.value
 
-    if (numeroUsuario3 <= 10) { document.querySelector("#premio").innerHTML = "reclame un jugo" }
-    else if (numeroUsuario3 >= 18) { document.querySelector("#premio").innerHTML = "reclame una cerveza" }
+    if (numeroUsuario3 <= 10) {
+        document.querySelector("#premio").innerHTML = "reclame un jugo"
+    }
+    else if (numeroUsuario3 >= 18) {
+        document.querySelector("#premio").innerHTML = "reclame una cerveza"
+    } else {  
+        document.querySelector("#premio").innerHTML = "Lo sentimos desafortunadamente, no recibe ningún premio."
 
-    if(generohm == "mujer"){document.querySelector("#premio_2").innerHTML = "reclame pizza hawaiana"}
+    }
 
+    if (generohm == "mujer") {
+        document.querySelector("#premio_2").innerHTML = "reclame pizza hawaiana"
+    } else if (generohm == "hombre") {
+        document.querySelector("#premio_2").innerHTML = "reclame pizza 3 carnes"
+    } else {
+        document.querySelector("#premio").innerHTML = "Lo sentimos desafortunadamente, no recibe ningún premio."
+    }
 })
