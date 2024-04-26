@@ -39,7 +39,7 @@ formulario3.addEventListener('submit', function (evento) {
     }
     else if (numeroUsuario3 >= 18) {
         document.querySelector("#premio").innerHTML = "reclame una cerveza"
-    } else {  
+    } else {
         document.querySelector("#premio").innerHTML = "Lo sentimos desafortunadamente, no recibe ningún premio."
 
     }
@@ -51,4 +51,20 @@ formulario3.addEventListener('submit', function (evento) {
     } else {
         document.querySelector("#premio").innerHTML = "Lo sentimos desafortunadamente, no recibe ningún premio."
     }
+})
+
+let formulario4 = document.querySelector("#CuartoPunto")
+formulario4.addEventListener('submit', function (evento) {
+    evento.preventDefault()
+
+    let Multiplicando1 = evento.target.MultiplicandoIn.value
+    let Multiplicador2 = evento.target.MultiplicadorIn.value
+
+    for (x = 1; x <= Multiplicador2; x++) {
+
+        resulpado4 = Multiplicando1 * x
+
+        document.querySelector("#resultadoCua").innerHTML += `${Multiplicando1} x ${Multiplicador2} = ${resulpado4} <br>`
+    }
+
 })

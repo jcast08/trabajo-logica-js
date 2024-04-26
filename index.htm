@@ -14,7 +14,7 @@
 </head>
 
 <body class="container d-flex align-items-row">
-    <div class="justify-content-center">
+    <div class="justify-content-center py-5">
         <h1>Ejercicios de logica</h1>
 
         <section class="container mt-5 cajas">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="row mb-3">
                 </div>
-                <button type="submit" class="btn btn-primary" id="sumar-btn">Sumar</button>
+                <button type="submit" class="btn btn-dark m-5">Sumar</button>
             </form>
         </section>
 
@@ -63,7 +63,7 @@
                 </div>
                 <div class="row mb-3">
                 </div>
-                <button type="submit" class="btn btn-primary" id="sumar-btn">Sumar</button>
+                <button type="submit" class="btn btn-dark m-5">Revisar</button>
             </form>
         </section>
 
@@ -73,27 +73,36 @@
                 Participa por un premio
             </div>
 
-                <form class="ms-5 row g-3 col-7" id="tercerPunto">
-                    <input type="number" class="form-control " placeholder="ingrese su edad" id="inputTres">
-                    <select id="generos">
-                        <option value="seleccionar">seleccionar</option>
-                        <option value="hombre">hombre</option>
-                        <option value="mujer">mujer</option>
-                    </select>
-                    <button type="submit" class="btn btn-dark m-5">oprimir</button>
-                </form>
-                <div id="premio" class="justify-content-center d-flex">resultado2</div>
-                <div id="premio_2" class="justify-content-center d-flex">resultado2</div>
+            <form class="ms-5 row g-3 col-7" id="tercerPunto">
+                <input type="number" class="form-control " placeholder="ingrese su edad" id="inputTres">
+                <select id="generos">
+                    <option value="seleccionar">seleccionar</option>
+                    <option value="hombre">hombre</option>
+                    <option value="mujer">mujer</option>
+                </select>
+                <button type="submit" class="btn btn-dark m-5">Participar</button>
+            </form>
+            <div id="premio" class="justify-content-center d-flex"></div>
+            <div id="premio_2" class="justify-content-center d-flex"></div>
 
 
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label">Resultado</label>
-                    <div class="col-sm-10">
-                        <div id="Resultadotres"></div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                </div>
+            </form>
+        </section>
+
+        <section class="container mt-5 cajas">
+
+            <div class="text-center py-4">
+                <h2>Tablas de multiplicar</h2>
+                <div>Escriba el Multiplicando y multiplicador en los campos</div>
+            </div>
+
+            <form class="ms-5 row g-3 col-7" id="CuartoPunto">
+                <input type="number" class="form-control " placeholder="ingrese el multiplicando" id="MultiplicandoIn">
+                <input type="number" class="form-control " placeholder="ingrese el multiplicador" id="MultiplicadorIn">
+                <button type="submit" class="btn btn-dark m-5">Multiplicar</button>
+            </form>
+            <div id="resultadoCua" class="justify-content-center d-flex"></div>
+
             </form>
         </section>
 
