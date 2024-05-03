@@ -74,10 +74,12 @@ formulario4.addEventListener('submit', function (evento) {
 //Punto numero 5
 
 let formulario5 = document.querySelector("#QuintoPunto")
-formulario5.addEventListener('submit',function(evento){
-evento.preventDefault()
+formulario5.addEventListener('submit', function (evento) {
+    evento.preventDefault()
 
-let Platos = [{
+})
+
+let Carta = [{
     id: 1,
     nombre: "Hamburguesa",
     precio: 15000,
@@ -108,30 +110,28 @@ let Platos = [{
     nombre: "Arepa de Queso",
     precio: 2000,
     cantidad: 1
-}
+},
 
-]
-
-let Bebidas = [{
-    id: 1,
+{
+    id: 5,
     nombre: "Colombiana",
     precio: 3000,
     cantidad: 1
 },
 {
-    id: 2,
+    id: 6,
     nombre: "Uva",
     precio: 3000,
     cantidad: 1
 },
 {
-    id: 3,
+    id: 6,
     nombre: "Cocacola",
     precio: 3500,
     cantidad: 1
 },
 {
-    id: 4,
+    id: 8,
     nombre: "Limonada",
     precio: 4000,
     imagen: "https://via.placeholder.com/100x100",
@@ -139,14 +139,25 @@ let Bebidas = [{
 },
 
 {
-    id: 4,
+    id: 9,
     nombre: "Agua",
     precio: 2000,
     cantidad: 1
+}]
+
+let menuProd = document.querySelector("#MenuCompleto")
+listarProductos()
+
+function listarProductos() {
+    menuProd.innerHTML = ""
+    Carta.forEach(mostrarmenu => {
+        menuProd.innerHTML += `
+        <div class="d-flex justify-content-center align-items-start flex-column ms-4">
+            <h5>${mostrarmenu.nombre}</h5>
+            <h6 id="precioTotalProducto${mostrarmenu.id}">$ ${mostrarmenu.precio}</h6>
+        </div>
+        `
+
+    })
+
 }
-
-]
-
-
-
-})
