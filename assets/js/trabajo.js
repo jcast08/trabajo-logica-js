@@ -64,7 +64,7 @@ formulario4.addEventListener('submit', function (evento) {
 
         resulpado4 = Multiplicando1 * x
 
-        document.querySelector("#resultadoCua").innerHTML += `${Multiplicando1} x ${Multiplicador2} = ${resulpado4} <br>`
+        document.querySelector("#resultadoCua").innerHTML += `${Multiplicando1} x ${x} = ${resulpado4} <br>`
     }
 
 })
@@ -79,85 +79,121 @@ formulario5.addEventListener('submit', function (evento) {
 
 })
 
-let Carta = [{
+let Menu = [{
     id: 1,
     nombre: "Hamburguesa",
     precio: 15000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "Plato"
 },
 {
     id: 2,
     nombre: "Perro Caliente",
     precio: 13000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "Plato"
 },
 {
     id: 3,
     nombre: "Empanada",
     precio: 3000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "Plato"
 },
 {
     id: 4,
     nombre: "Papa Rellena",
     precio: 150000,
     imagen: "https://via.placeholder.com/100x100",
-    cantidad: 1
+    cantidad: 1,
+    categoria: "Plato"
 },
 
 {
     id: 4,
     nombre: "Arepa de Queso",
     precio: 2000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "Plato"
 },
 
 {
     id: 5,
     nombre: "Colombiana",
     precio: 3000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "bebida"
 },
+
 {
     id: 6,
     nombre: "Uva",
     precio: 3000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "bebida"
 },
+
 {
     id: 6,
     nombre: "Cocacola",
     precio: 3500,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "bebida"
 },
+
 {
     id: 8,
     nombre: "Limonada",
     precio: 4000,
-    imagen: "https://via.placeholder.com/100x100",
-    cantidad: 1
+    cantidad: 1,
+    categoria: "bebida"
 },
 
 {
     id: 9,
     nombre: "Agua",
     precio: 2000,
-    cantidad: 1
+    cantidad: 1,
+    categoria: "bebida"
+
 }]
 
-let menuProd = document.querySelector("#MenuCompleto")
+
+let bebida = document.querySelector("#beber")
+let Plato = document.querySelector("#comer")
 listarProductos()
 
 function listarProductos() {
-    menuProd.innerHTML = ""
-    Carta.forEach(mostrarmenu => {
-        menuProd.innerHTML += `
-        <div class="d-flex justify-content-center align-items-start flex-column ms-4">
-            <h5>${mostrarmenu.nombre}</h5>
-            <h6 id="precioTotalProducto${mostrarmenu.id}">$ ${mostrarmenu.precio}</h6>
-        </div>
-        `
+    Menu.forEach(mostrarPlatos => {
 
+        if (mostrarPlatos.categoria == "Plato") {
+            Plato.innerHTML += `
+
+    <div>
+        <div class="d-flex justify-content-center align-items-start flex-column ms-4">
+            <h5>${mostrarPlatos.nombre}</h5>
+            <h6 id="precioTotalProducto${mostrarPlatos.id}">$ ${mostrarPlatos.precio}</h6>
+        </div>
+    <div/>
+            
+            `
+        }
+        else if (mostrarPlatos.categoria == "bebida"){
+            bebida.innerHTML += `
+
+    <div>
+        <div class="d-flex justify-content-center align-items-start flex-column ms-4">
+            <h5>${mostrarPlatos.nombre}</h5>
+            <h6 id="precioTotalProducto${mostrarPlatos.id}">$ ${mostrarPlatos.precio}</h6>
+        </div>
+    <div/> 
+            `
+        }
     })
 
-}
+}   
+
+let ListaProd = []
+
+let SelecProd = document.querySelector("#InputProductos")
+
